@@ -1,0 +1,137 @@
+/**
+ * EasyZoom core styles
+ */
+.easyzoom {
+	position: relative;
+	display: inline-block;
+ *display: inline;
+ *zoom: 1;
+	width: 100%;
+	min-height: 410px;/* border-right:1px dashed #d6ceda; */
+}
+
+.easyzoom a img {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.easyzoom2 { width: 78%; margin-left: 2%; float: left; min-height: 386px; }
+.easyzoom2 a img { max-height: 525px; }
+.easyzoom img {
+	vertical-align: bottom;
+}
+.easyzoom.is-loading img {
+	cursor: progress;
+}
+.easyzoom.is-ready img {
+	cursor: crosshair;
+}
+.easyzoom.is-error img {
+	cursor: not-allowed;
+}
+.easyzoom-notice {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 150;
+	width: 10em;
+	margin: -1em 0 0 -5em;
+	line-height: 2em;
+	text-align: center;
+	background: #FFF;
+	box-shadow: 0 0 10px #888;
+}
+.easyzoom-flyout {
+	position: absolute;
+	z-index: 100;
+	overflow: hidden;
+	background: #FFF;
+}
+/**
+ * EasyZoom layout variations
+ */
+.easyzoom--overlay .easyzoom-flyout {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.easyzoom--adjacent .easyzoom-flyout {
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+}
+/*thumnail css*/
+
+pre, code, var, tt {
+	font-size: 15px;
+	font-style: normal;
+}
+pre {
+	overflow: auto;
+	padding: 1em .5em;
+	border: 1px solid #333;
+	line-height: 1.25;
+	text-align: left;
+	border-radius: 5px;
+}
+.thumbnails {
+	overflow: hidden;
+	margin: 0.2em 0 0em 0;
+	padding: 0;
+	text-align: center;
+}
+
+.thumbnails li {
+	list-style: none;
+	padding: 4px;
+	float: left;
+	background: #fff;
+	line-height: 0px;
+	width: 22%;
+	height: 80px;
+	margin: 0px 5px 5px 0px;
+	border: 1px solid #e5e5e5;
+	align-items: center;
+	text-align: center !important;
+}
+
+.thumbnails-left {
+	float: left; width: 15%;
+}
+.thumbnails-left li {
+	float: none; width: 100%; height: 70px; display: flex; align-items: center; justify-content: center; 
+}
+.thumbnails li img {
+	margin: 0 auto;
+	max-width: 100%;
+	max-height: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.toggle {
+	display: block;
+	margin: 10px auto 1.5em;
+}
+ @media screen and (max-width:767px) {
+.thumbnails li {
+	width: 100px;
+	height: 110px;
+	margin: 0px 10px 5px 0px;
+}
+}
+@media screen and (max-width:380px) {
+.thumbnails li {
+	width: 70px;
+	height: 90px;
+	margin: 0px 2px 5px 0px;
+}
